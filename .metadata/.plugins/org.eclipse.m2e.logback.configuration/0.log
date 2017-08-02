@@ -388,3 +388,4 @@
 2017-08-02 12:01:57,461 [Worker-78] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
 2017-08-02 12:01:57,461 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\JavaWEB\CadastroUsuarioJSFcassio\src\main\resources
 2017-08-02 12:01:57,461 [Worker-78] WARN  o.e.m.c.i.embedder.EclipseLogger - Using platform encoding (Cp1252 actually) to copy filtered resources, i.e. build is platform dependent!
+2017-08-02 12:01:57,461 [Worker-78] INFO  o.e.m.c.i.embedder.EclipseLogger - skip non existing resourceDirectory C:\JavaWEB\CadastroUsuarioJSFcassio\src\test\resources
