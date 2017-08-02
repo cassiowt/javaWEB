@@ -1,0 +1,24 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+	<h1>Pedido de Animal</h1>
+	<h:form>
+		<h:outputLabel value="Especie:"/>
+		<h:inputText value="#{animalMB.animal.especie}"/>
+			
+		<h:outputLabel value="Apelido"/>
+		<h:inputText value="#{animalMB.animal.apelido}"/>
+			
+		<h:outputLabel value="Tamanho"/>
+		<h:inputText value="#{animalMB.animal.tamanho}"/>
+			
+		<h:commandButton value="Solicitar" action="solicitacao"/>
+	</h:form>
+</h:body>
+</html>

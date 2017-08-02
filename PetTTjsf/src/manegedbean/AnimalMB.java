@@ -1,0 +1,31 @@
+package manegedbean;
+
+import javax.faces.bean.ManagedBean;
+import javax.faces.bean.SessionScoped;
+
+import model.Animal;
+
+@ManagedBean
+@SessionScoped
+public class AnimalMB {
+	
+	private Animal animal;
+	
+	public AnimalMB() {
+	  animal = new Animal();
+	}
+
+	public Animal getAnimal() {
+		return animal;
+	}
+
+	public void setAnimal(Animal animal) {
+		this.animal = animal;
+	}
+	
+	public void imprime( ) {
+		System.out.println(animal);
+	}
+
+	
+}

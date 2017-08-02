@@ -1,0 +1,5 @@
+#Tomcat publish data
+#Wed Aug 02 12:01:58 BRT 2017
+org.eclipse.jst.jee.server\:PetTTjsf=C\:\\JavaJPA\\apache-tomcat-8.5.16\\wtpwebapps\\PetTTjsf
+org.eclipse.jst.jee.server\:CadastroUsuarioJSF=C\:\\JavaJPA\\apache-tomcat-8.5.16\\wtpwebapps\\CadastroUsuarioJSF
+org.eclipse.jst.jee.server\:CadastroUsuarioJSFcassio=C\:\\JavaJPA\\apache-tomcat-8.5.16\\wtpwebapps\\CadastroUsuarioJSFcassio

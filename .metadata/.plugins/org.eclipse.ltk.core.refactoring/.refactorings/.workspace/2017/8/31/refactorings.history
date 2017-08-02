@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;CadastroUsuarioJSF&apos; to &apos;CadastroUsuarioJSFcassio&apos;" description="Rename resource &apos;CadastroUsuarioJSF&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/CadastroUsuarioJSF" name="CadastroUsuarioJSFcassio" stamp="1501686114522" updateReferences="true"/>
+</session>
