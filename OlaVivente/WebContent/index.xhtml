@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+    <h:head>
+      <title>JSF Mensages</title>	 	
+   </h:head>
+   <f:loadBundle basename="resources.messages" var="msg"/>
+   <h:body> 
+      <h2><h:outputLabel value="#{msg.titulo}" /> </h2>     
+      <h:form>
+         <h3><h:outputText value = "#{msg.mensagem}" /></h3>
+         <h:panelGrid columns = "2"> 
+            <h:outputLabel value="#{msg.lingua}" /> 
+            <h:selectOneMenu value = "#{userData.locale}" onchange = "submit()"  valueChangeListener = "#{userData.localeChanged}">
+               <f:selectItems value = "#{userData.countries}" /> 
+            </h:selectOneMenu> 
+         </h:panelGrid> 
+        </h:form>
+   </h:body>
+</html>
+

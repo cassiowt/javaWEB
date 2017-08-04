@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+<h:body>
+ 		<f:loadBundle basename="resources.messages" var="msg"/>
+		<h:outputLabel value="Aviso" />
+		
+		<h:outputFormat value="#{msg.aviso}" >
+			<f:param value="#{bean.registrosExcluidos}"/>
+		</h:outputFormat>
+</h:body>
+</html>

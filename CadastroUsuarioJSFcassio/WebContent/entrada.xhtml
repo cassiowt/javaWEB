@@ -6,36 +6,43 @@
 	xmlns:h="http://xmlns.jcp.org/jsf/html"
 	xmlns:f="http://xmlns.jcp.org/jsf/core">
 <h:body>
-
-	<h2>*****CADASTRAR USUÁRIO*****</h2>
-	<h:form>
-		<h:outputLabel value="ID: "/>
-		<h:inputText value="#{usuarioMB.usuario.id}"/><br/>
-
-		<h:outputLabel value="NOME: "/>
-		<h:inputText value="#{usuarioMB.usuario.nome}"/><br/>
+<f:loadBundle basename="resources.messages" var="msg"/>
+	<h:outputFormat value="#{msg.titulo}" />
+	<h:form prependId="false">
+		<h:panelGrid columns="2">
+			<h:outputLabel value="ID: "/>
+			<h:inputText id="id" value="#{usuarioMB.usuario.id}" required="true"/>
+	
+			<h:outputLabel value="NOME: "/>
+			<h:inputText id="nome" value="#{usuarioMB.usuario.nome}" required="true" maxlength="30" size="80"/>
+			
+			<h:outputLabel value="RG: "/>
+			<h:inputText id="rg" value="#{usuarioMB.usuario.rg}" required="true"/>
+			
+			<h:outputLabel value="CPF: "/>
+			<h:inputText id="cpf" value="#{usuarioMB.usuario.cpf}" required="true"/>
+			
+			<h:outputLabel value="SALARIO: "/>
+			<h:inputText id="salario" value="#{usuarioMB.usuario.salario}" required="true"/>
+			
+			<h:outputLabel value="DATA DE NASCIMENTO: "/>
+			<h:panelGroup>
+				<h:inputText id="dataNascimento" value="#{usuarioMB.usuario.dataNascimento}" required="true"/>
+				<h:message for="dataNascimento"/>
+			</h:panelGroup>
+			
+			<h:outputLabel value="EMAIL: "/>
+			<h:panelGroup>
+				<h:inputText id="email" value="#{usuarioMB.usuario.email}" required="true" size="80"/>
+				<h:message for="email"/>
+			</h:panelGroup>
 		
-		<h:outputLabel value="RG: "/>
-		<h:inputText value="#{usuarioMB.usuario.rg}"/><br/>
-		
-		<h:outputLabel value="CPF: "/>
-		<h:inputText value="#{usuarioMB.usuario.cpf}"/><br/>
-		
-		<h:outputLabel value="SALARIO: "/>
-		<h:inputText value="#{usuarioMB.usuario.salario}"/><br/>
-		
-		<h:outputLabel value="DATA DE NASCIMENTO: "/>
-		<h:inputText value="#{usuarioMB.usuario.dataNascimento}"/><br/>
-		
-		<h:outputLabel value="EMAIL: "/>
-		<h:inputText value="#{usuarioMB.usuario.email}"/><br/>
-		
-		
+		</h:panelGrid>
 		<h:commandButton value="Gravar" action="resultado"/>
-
+		<h:messages/>
 		<h:commandButton value="Salvar" action="#{usuarioMB.save}"/>
-		
-		<h:outputLabel value="#{usuarioMB.msg}"/><br/>
+		<br/>
+		<h:inputText value="#{usuarioMB.msg}" size="80" readonly="true"/>
 		
 	</h:form>
 </h:body>

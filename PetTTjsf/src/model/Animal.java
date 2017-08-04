@@ -11,6 +11,15 @@ public class Animal {
 		// TODO Auto-generated constructor stub
 	} 
 	
+	
+	public Animal(String especie, String apelido, float tamanho) {
+		super();
+		this.especie = especie;
+		this.apelido = apelido;
+		this.tamanho = tamanho;
+	}
+
+
 	public String getEspecie() {
 		return especie;
 	}
