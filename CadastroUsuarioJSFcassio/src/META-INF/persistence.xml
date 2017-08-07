@@ -4,7 +4,10 @@
 	xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
 	<persistence-unit name="jpa">
 		<provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+<<<<<<< HEAD
 		<class>model.Animal</class>
+=======
+>>>>>>> 13e5cbe45790122c0c6a5d9aa35c5caf01db8b67
 		<class>model.Usuario</class>
 
 		<properties>
