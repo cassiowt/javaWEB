@@ -1,0 +1,52 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:body>
+<f:loadBundle basename="resources.messages" var="msg"/>
+	<h1><h:outputLabel value="#{msg.tituloAnimal}"/></h1>
+	<h:form prependId="false">
+	<h:messages/>
+	<h:panelGrid columns="2">
+	
+		<h:outputLabel value="#{msg.labelApelido}" />
+		<h:inputText id="apelido" value="#{animalMB.animal.apelido}" 
+		  required="true" size="20"/>
+	
+		<h:outputLabel value="#{msg.labelEspecie}"/>
+		<h:selectOneMenu id="especie" value="#{animalMB.animal.especie}" required="true">
+			<f:selectItem itemValue="" itemLabel="Selecione..."/>
+			<f:selectItem itemValue="cao" itemLabel="Cachorros"/>
+			<f:selectItem itemValue="gato" itemLabel="Gatos"/>
+			<f:selectItem itemValue="ave" itemLabel="Passaros"/>
+			<f:selectItem itemValue="repteis" itemLabel="Roedores"/>
+		</h:selectOneMenu>
+	
+		<h:outputLabel value="#{msg.labelTamanho}"/>
+		<h:panelGroup>
+			<h:inputText id="tamanho" value="#{animalMB.animal.tamanho}" />
+				
+			<h:message for="tamanho"/>
+		</h:panelGroup>
+		
+		<h:outputLabel value="#{msg.labelPeso}"/>
+		<h:inputText id="peso" value="#{animalMB.animal.peso}"/>
+
+		<h:outputLabel value="#{msg.labelDataNascimento}"/>
+		<h:inputText id="dataNascimento" value="#{animalMB.animal.dataNascimento}"
+		converterMessage="Não é uma data valida, use o formato dd/mm/aaaa 01/01/1970">
+			<f:convertDateTime pattern="dd/MM/yyyy"/>
+		</h:inputText>
+	
+	</h:panelGrid>
+	<h:commandButton value="#{msg.btnSalvar}" action="#{animalMB.save}"/>
+	<h:commandButton value="#{msg.btnCancelar}" type="reset"/>
+	<br/>
+	<h:inputText value="#{usuarioMB.msg}" size="80" readonly="true"/>
+	</h:form>
+</h:body>
+
+</html>

@@ -1,0 +1,23 @@
+@charset "ISO-8859-1";
+
+.head {
+	border-width: 2px;
+	border-color: green;
+	border-style: solid;
+	text-align: center;
+}
+
+.content {
+	border-width: 2px;
+	border-color: black;
+	border-style: solid;
+	text-align: center;
+}
+
+.foot {
+	border-width: 2px;
+	border-color: red;
+	border-style: solid;
+	text-align: center;
+	font-size: 8px;
+}

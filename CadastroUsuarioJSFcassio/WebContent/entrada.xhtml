@@ -36,10 +36,9 @@
 				<h:inputText id="email" value="#{usuarioMB.usuario.email}" required="true" size="80"/>
 				<h:message for="email"/>
 			</h:panelGroup>
-		
-		</h:panelGrid>
-		<h:commandButton value="Gravar" action="resultado"/>
 		<h:messages/>
+		</h:panelGrid>
+		<h:commandButton value="Cancelar" type="reset"/>
 		<h:commandButton value="Salvar" action="#{usuarioMB.save}"/>
 		<br/>
 		<h:inputText value="#{usuarioMB.msg}" size="80" readonly="true"/>

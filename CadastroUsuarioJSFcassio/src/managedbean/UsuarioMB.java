@@ -3,6 +3,7 @@ package managedbean;
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.SessionScoped;
 
+import dao.UsuarioDAO;
 import model.Usuario;
 
 @ManagedBean
@@ -10,9 +11,11 @@ import model.Usuario;
 public class UsuarioMB {
 	private Usuario usuario;
 	private String msg;
+	private UsuarioDAO dao;
 	
 	public UsuarioMB() {
 	 usuario = new Usuario();
+	 dao = new UsuarioDAO();
 	}
 
 	public Usuario getUsuario() {
@@ -33,8 +36,10 @@ public class UsuarioMB {
 	}
 	
 	public void save() {
-	
+		
 		this.setMsg("Usuario " +  usuario.getNome() + " salvo com sucesso " );
+		dao.save(usuario);
+		
 		
 	}
 }
