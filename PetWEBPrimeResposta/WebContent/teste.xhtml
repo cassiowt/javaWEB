@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3c.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head></h:head>
+<h:body>
+	<f:loadBundle basename="resources.messages" var="msg" />
+	<p:panelGrid columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
+		layout="grid" styleClass="ui-panelgrid-blank">
+		<p:outputLabel for="apelido" value="#{msg.labelApelido}" />
+		<p:inputText id="apelido" value="#{usuarioMB.usuario.nome}"
+			required="true" />
+		<p:outputLabel for="dataNascimento" value="#{msg.labelDataNascimento}" />
+		<p:calendar id="dataNascimento"
+			value="#{usuarioMB.usuario.dataNascimento}" showOn="button" />
+	</p:panelGrid>
+
+</h:body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+<h:body>
+	<f:loadBundle basename="resources.messages" var="msg" />
+		<p:growl />
+		<p:fieldset legend="#{msg.tituloAnimal}" style="margin-bottom:20px">
+		<h:form prependId="false">
+			<p:panelGrid id="grid" columns="2" columnClasses="ui-grid-col-4,ui-grid-col-8"
+				layout="grid" styleClass="ui-panelgrid-blank">
+
+				<h:outputLabel value="#{msg.labelApelido}" />
+				<p:inputText id="apelido" value="#{animalMB.animal.apelido}"
+					required="true" size="20" />
+
+				<h:outputLabel value="#{msg.labelEspecie}" />
+				<p:selectOneRadio id="especie" value="#{animalMB.animal.especie}"
+					required="true">
+					<f:selectItem itemValue="cao" itemLabel="Cachorros" />
+					<f:selectItem itemValue="gato" itemLabel="Gatos" />
+					<f:selectItem itemValue="ave" itemLabel="Passaros" />
+					<f:selectItem itemValue="repteis" itemLabel="Roedores" />
+				</p:selectOneRadio>
+
+				<p:outputLabel value="#{msg.labelTamanho}" />
+				<p:inputText id="tamanho" value="#{animalMB.animal.tamanho}"
+					required="true" />
+
+				<p:outputLabel value="#{msg.labelPeso}" />
+				<p:inputText id="peso" value="#{animalMB.animal.peso}"
+					required="true" />
+
+				<p:outputLabel value="#{msg.labelDataNascimento}" />
+				<p:calendar id="dataNascimento"
+					value="#{animalMB.animal.dataNascimento}"
+					converterMessage="Não é uma data valida, use o formato dd/mm/aaaa 01/01/1970"
+					showButtonPanel="true" showOn="button" required="true" />
+
+			</p:panelGrid>
+			<p:panelGrid>
+				<p:commandButton value="#{msg.btnSalvar}" action="#{animalMB.save}" update="grid" />
+				<p:commandButton value="#{msg.btnCancelar}" type="reset" />
+			</p:panelGrid>
+		</h:form>
+	</p:fieldset>
+		
+</h:body>
+
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+
+
+<h:body>
+
+	<h2>*****CADASTRO DO USUÁRIO*****</h2>
+	<h:form>
+		<h:outputLabel value="ID: "/>
+		<h:outputText value="#{usuarioMB.usuario.id}"/><br/>
+
+		<h:outputLabel value="NOME: "/>
+		<h:outputText value="#{usuarioMB.usuario.nome}"/><br/>
+		
+		<h:outputLabel value="RG: "/>
+		<h:outputText value="#{usuarioMB.usuario.rg}"/><br/>
+		
+		<h:outputLabel value="CPF: "/>
+		<h:outputText value="#{usuarioMB.usuario.cpf}"/><br/>
+		
+		<h:outputLabel value="SALARIO: "/>
+		<h:outputText value="#{usuarioMB.usuario.salario}"/><br/>
+		
+		<h:outputLabel value="DATA DE NASCIMENTO: "/>
+		<h:outputText value="#{usuarioMB.usuario.dataNascimento}"/><br/>
+		
+		<h:outputLabel value="EMAIL: "/>
+		<h:outputText value="#{usuarioMB.usuario.email}"/><br/>
+		
+	</h:form>
+</h:body>
+</html>
